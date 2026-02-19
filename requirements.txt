@@ -1,0 +1,14 @@
+langchain
+langchain-classic
+wikipedia
+google-search-results
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
+google-auth-oauthlib
+langchain-community
+langchain-openai
+langchain-anthropic
+python-dotenv
+pydantic
+duckduckgo-search
