@@ -8,7 +8,10 @@ def run_agents(scenario):
         HealthPolicyAgent(),
         EmploymentLaborAgent(),
         EnvironmentalPolicyAgent(),
-        TechnologicalPolicyAgent()
+        TechnologicalPolicyAgent(),
+        HousingAgent(),
+        EducationAgent(),
+        NationalSecurityAgent()
     ]
 
     results = {}
