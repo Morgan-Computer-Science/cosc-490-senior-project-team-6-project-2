@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from pathlib import Path
 from coordinator.run_agents import run_agents
 
