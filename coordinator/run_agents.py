@@ -14,6 +14,6 @@ def run_agents(scenario):
     results = {}
 
     for agent in agents:
-        results[agent.name] = agent.analyze(scenario)
+        results[agent.name] = agent.run(scenario)
 
     return results
