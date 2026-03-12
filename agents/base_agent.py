@@ -6,7 +6,7 @@ class BasePolicyAgent:
         self.name = name
         self.model = model
         self.prompt_text = Path(prompt_file).read_text(encoding="utf-8")
-        self.client = genai.Client()
+        self.client = genai.Client(api_key="AIzaSyDgo0Tpl_MlkxelgJRz9n1KQIrL_Rz-iNY")
 
     def analyze(self, scenario: str) -> str:
         response = self.client.models.generate_content(
