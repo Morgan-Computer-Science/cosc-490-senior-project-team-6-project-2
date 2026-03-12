@@ -14,7 +14,7 @@ class BasePolicyAgent:
         with open(prompt_file, "r") as f:
             self.system_prompt = f.read()
 
-        self.model = genai.GenerativeModel("gemini-1.5-flash")
+        self.model = genai.GenerativeModel("gemini-2.5-flash")
 
 
     def run(self, scenario):
