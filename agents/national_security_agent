@@ -1,71 +1,8 @@
-# national_security_advisor_vertex.py
+from agents.base_agent import BasePolicyAgent
 
-import os
-import vertexai
-from vertexai.generative_models import GenerativeModel
-
-os.environ["PROJECT"] = "capstone-490018"
-
-api_key = os.environ.get("Key")
-if not api_key:
-    raise EnvironmentError("Key environment variable not set.")
-
-vertexai.init(
-    project="capstone-490018",
-    location="us-central1",
-    api_key=api_key
-)
-
-model = GenerativeModel("gemini-2.0-flash-001")
-
-SYSTEM_PROMPT = """
-You are the Presidential Advisor for National Security.
-
-Responsibilities:
-- Analyze military, cyber, and geopolitical threats
-- Evaluate intelligence reports
-- Recommend national security policies
-- Prepare presidential briefing documents
-
-When responding:
-1. Identify the threat
-2. Analyze root causes
-3. Present intelligence evidence
-4. Provide policy recommendations
-5. Suggest implementation steps
-"""
-
-def advisor_agent(task):
-
-    prompt = f"""
-{SYSTEM_PROMPT}
-
-Scenario:
-{task}
-"""
-
-    response = model.generate_content(prompt)
-
-    return response.text
-
-
-if __name__ == "__main__":
-
-    print("Presidential National Security Advisor (Vertex AI)\n")
-
-    while True:
-
-        task = input("Enter national security scenario: ")
-
-        if not task.strip():
-            print("Please enter a valid question.")
-            continue
-
-        try:
-            result = advisor_agent(task)
-
-            print("\nPresidential Briefing:\n")
-            print(result)
-
-        except Exception as e:
-            print(f"\nError: {e}")
+class NationalSecurityAgent(BasePolicyAgent):
+    def __init__(self):
+        super().__init__(
+            name="National Security Agent",
+            prompt_file="prompts/national_security_prompt.txt",
+        )
