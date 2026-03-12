@@ -1,5 +1,5 @@
 from pathlib import Path
-from google import genai
+import google.generativeai as genai
 
 class BasePolicyAgent:
     def __init__(self, name: str, prompt_file: str, model: str = "gemini-2.5-flash"):
