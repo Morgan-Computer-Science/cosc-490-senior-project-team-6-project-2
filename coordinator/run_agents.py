@@ -5,7 +5,7 @@ from agents.technological_agent import TechnologicalPolicyAgent
 from agents.technological_agent import HousingAgent
 from agents.technological_agent import EducationAgent
 from agents.technological_agent import NationalSecurityAgent
-from agents.technological_agent import Econmonic Agent
+from agents.technological_agent import EconmonicAgent
 def run_agents(scenario):
 
     agents = [
