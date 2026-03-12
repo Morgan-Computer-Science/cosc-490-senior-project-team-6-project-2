@@ -1,22 +1,33 @@
-from pathlib import Path
 import google.generativeai as genai
+import os
+
 
 class BasePolicyAgent:
-    def __init__(self, name: str, prompt_file: str, model: str = "gemini-2.5-flash"):
-        self.name = name
-        self.model = model
-        self.prompt_text = Path(prompt_file).read_text(encoding="utf-8")
-        self.client = genai.Client(api_key="AIzaSyDgo0Tpl_MlkxelgJRz9n1KQIrL_Rz-iNY")
 
-    def analyze(self, scenario: str) -> str:
-        response = self.client.models.generate_content(
-            model=self.model,
-            contents=f"Scenario:\n{scenario}",
-            config={
-                "system_instruction": self.prompt_text,
-                "temperature": 0.4,
-            },
-        )
-        return response.text.strip()
+    def __init__(self, name, prompt_file):
+
+        self.name = name
+        self.prompt_file = prompt_file
+
+        genai.configure(api_key=os.getenv("AIzaSyDgo0Tpl_MlkxelgJRz9n1KQIrL_Rz-iNY"))
+
+        with open(prompt_file, "r") as f:
+            self.system_prompt = f.read()
+
+        self.model = genai.GenerativeModel("gemini-1.5-flash")
+
+
+    def run(self, scenario):
+
+        prompt = f"""
+{self.system_prompt}
+
+SCENARIO:
+{scenario}
+"""
+
+        response = self.model.generate_content(prompt)
+
+        return response.text
 
 
