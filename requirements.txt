@@ -1,2 +1,4 @@
-google-genai
+google-adk
+fastapi
+uvicorn[standard]
 python-dotenv
