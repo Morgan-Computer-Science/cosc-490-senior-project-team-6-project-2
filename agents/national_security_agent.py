@@ -1,8 +1,0 @@
-from agents.base_agent import BasePolicyAgent
-
-class NationalSecurityAgent(BasePolicyAgent):
-    def __init__(self):
-        super().__init__(
-            name="National Security Agent",
-            prompt_file="prompts/national_security_prompt.txt",
-        )
