@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Chat: leave empty when you open the site from uvicorn on :8000. If you use Live Server or another port, set to http://127.0.0.1:8000 -->
+    <meta name="chat-api-base" content="">
+    <!-- Set to "true" to log API URL and responses in the browser console -->
+    <meta name="adk-debug" content="false">
+    <title>President — Leadership for Tomorrow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav">
+            <a href="#" class="logo">The Office</a>
+            <ul class="nav-links">
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#priorities">Priorities</a></li>
+                <li><a href="#assistant">Assistant</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Leadership for a New Era</h1>
+            <p class="hero-tagline">Unity. Progress. Integrity.</p>
+            <a href="#priorities" class="cta-button">Learn more</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <section id="vision" class="section vision">
+        <div class="container">
+            <h2>Our Vision</h2>
+            <p class="lead">A nation where every citizen has the opportunity to thrive, where our values of freedom and justice guide every decision, and where we build a future worthy of the next generation.</p>
+        </div>
+    </section>
+
+    <section id="priorities" class="section priorities">
+        <div class="container">
+            <h2>Key Priorities</h2>
+            <p class="priorities-intro">Key priorities that shape our agenda. Select a priority to open the assistant with the matching advisor.</p>
+            <div class="priority-grid">
+                <article
+                    class="priority-card priority-card--agent"
+                    data-priority-agent="economic_agent"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open the assistant with the Economic advisor (economic stability)"
+                >
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Economic Stability</h3>
+                    <p>GDP, jobs, growth, and financial stability for working families and businesses.</p>
+                </article>
+                <article
+                    class="priority-card priority-card--agent"
+                    data-priority-agent="national_security_agent"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open the assistant with the National security advisor"
+                >
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>National Security</h3>
+                    <p>Protecting our citizens and strengthening our alliances around the world.</p>
+                </article>
+                <article
+                    class="priority-card priority-card--agent"
+                    data-priority-agent="healthcare_agent"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open the assistant with the Healthcare policy advisor"
+                >
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Healthcare</h3>
+                    <p>Ensuring access to quality healthcare for every family — policy, not personal medical advice.</p>
+                </article>
+                <article
+                    class="priority-card priority-card--agent"
+                    data-priority-agent="education_agent"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open the assistant with the Education policy advisor"
+                >
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Education</h3>
+                    <p>World-class education, access, and workforce readiness for every community.</p>
+                </article>
+                <article
+                    class="priority-card priority-card--agent"
+                    data-priority-agent="environment_agent"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open the assistant with the Environmental sustainability advisor"
+                >
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Climate &amp; Environment</h3>
+                    <p>Protecting our planet for future generations through sustainable policies and clean energy.</p>
+                </article>
+                <article
+                    class="priority-card priority-card--agent"
+                    data-priority-agent="infrastructure_agent"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open the assistant with the Infrastructure advisor"
+                >
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Infrastructure</h3>
+                    <p>Modernizing roads, bridges, and broadband to connect our communities and grow our economy.</p>
+                </article>
+                <article
+                    class="priority-card priority-card--agent"
+                    data-priority-agent="immigration_agent"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open the assistant with the Immigration advisor"
+                >
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Immigration Reform</h3>
+                    <p>Building a fair, secure, and humane immigration system that reflects our values.</p>
+                </article>
+                <article
+                    class="priority-card priority-card--agent"
+                    data-priority-agent="criminal_justice_agent"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open the assistant with the Criminal justice advisor"
+                >
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Criminal Justice Reform</h3>
+                    <p>Ensuring fair treatment, rehabilitation, and second chances for all Americans.</p>
+                </article>
+                <article
+                    class="priority-card priority-card--agent"
+                    data-priority-agent="veterans_agent"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open the assistant with the Veterans and military families advisor"
+                >
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Veterans &amp; Military Families</h3>
+                    <p>Honoring our veterans with proper healthcare, housing, and employment support.</p>
+                </article>
+                <article
+                    class="priority-card priority-card--agent"
+                    data-priority-agent="housing_agent"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open the assistant with the Housing and affordability advisor"
+                >
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Cost of Living &amp; Housing</h3>
+                    <p>Addressing inflation, housing costs, and affordability in communities nationwide.</p>
+                </article>
+                <article
+                    class="priority-card priority-card--agent"
+                    data-priority-agent="agriculture_agent"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open the assistant with the Agriculture advisor"
+                >
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Agriculture</h3>
+                    <p>Supporting farmers, rural communities, and a resilient food system.</p>
+                </article>
+                <article
+                    class="priority-card priority-card--agent"
+                    data-priority-agent="transportation_agent"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open the assistant with the Transportation advisor"
+                >
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Transportation</h3>
+                    <p>Safe, modern mobility — roads, rail, transit, aviation, and ports.</p>
+                </article>
+                <article
+                    class="priority-card priority-card--agent"
+                    data-priority-agent="foreign_relations_agent"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open the assistant with the Foreign relations advisor"
+                >
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Foreign Relations</h3>
+                    <p>Diplomacy, alliances, and America’s role in the world.</p>
+                </article>
+                <article
+                    class="priority-card priority-card--agent"
+                    data-priority-agent="technology_agent"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Open the assistant with the Technological advancements advisor"
+                >
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Technology &amp; Innovation</h3>
+                    <p>Leading the world in AI, cybersecurity, and digital infrastructure for the 21st century.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section quote-section">
+        <blockquote class="quote">
+            “The best way to predict the future is to create it.”
+        </blockquote>
+    </section>
+
+    <section id="assistant" class="section assistant">
+        <div class="container assistant-inner">
+            <h2>Ask the Office</h2>
+            <p class="assistant-intro">Choose how advisors are used: Auto routes by topic, or pick a specialist — agriculture (coordinator), Farm Bill, USDA programs, food security, commodity policy, criminal justice (coordinator), policing reform, courts &amp; sentencing, economic, education, environment, foreign relations, healthcare, housing, immigration, infrastructure, military (structure &amp; demographics), national security, technology, transportation, veterans — or the general assistant.</p>
+            <p id="chat-api-banner" class="chat-api-banner" hidden role="status"></p>
+            <div class="chat-toolbar" role="toolbar" aria-label="Transcript export">
+                <button type="button" id="chat-export-txt" class="chat-toolbar-btn">Export transcript (.txt)</button>
+                <button type="button" id="chat-export-json" class="chat-toolbar-btn">Export transcript (.json)</button>
+                <button type="button" id="chat-export-csv" class="chat-toolbar-btn">Export transcript (.csv)</button>
+                <button type="button" id="chat-clear" class="chat-toolbar-btn chat-toolbar-btn--muted">Clear history</button>
+            </div>
+            <div id="chat-log" class="chat-log" aria-live="polite"></div>
+            <p id="chat-status" class="chat-status" role="status"></p>
+            <form id="chat-form" class="chat-form">
+                <div class="chat-agent-row">
+                    <label for="chat-agent-choice" class="chat-agent-label">Advisor mode</label>
+                    <select id="chat-agent-choice" name="agent_choice" class="chat-agent-select" aria-describedby="chat-agent-hint">
+                        <option value="auto">Auto (Office decides)</option>
+                        <option value="root_agent">General assistant only</option>
+                        <option value="economic_agent">Economic advisor</option>
+                        <option value="environment_agent">Environmental sustainability</option>
+                        <option value="technology_agent">Technological advancements</option>
+                        <option value="national_security_agent">National security</option>
+                        <option value="military_agent">Military (structure &amp; demographics)</option>
+                        <option value="education_agent">Education</option>
+                        <option value="healthcare_agent">Healthcare</option>
+                        <option value="housing_agent">Housing &amp; cost of living</option>
+                        <option value="immigration_agent">Immigration</option>
+                        <option value="infrastructure_agent">Infrastructure</option>
+                        <option value="foreign_relations_agent">Foreign relations</option>
+                        <option value="agriculture_agent">Agriculture &amp; rural economies</option>
+                        <option value="farm_bill_agent">Agriculture — Farm Bill</option>
+                        <option value="usda_programs_agent">Agriculture — USDA programs</option>
+                        <option value="food_security_agent">Agriculture — Food security</option>
+                        <option value="commodity_policy_agent">Agriculture — Commodity policy</option>
+                        <option value="transportation_agent">Transportation</option>
+                        <option value="criminal_justice_agent">Criminal justice</option>
+                        <option value="policing_reform_agent">Justice — Policing reform</option>
+                        <option value="courts_sentencing_agent">Justice — Courts &amp; sentencing</option>
+                        <option value="veterans_agent">Veterans &amp; military families</option>
+                    </select>
+                    <p id="chat-agent-hint" class="chat-agent-hint">Auto uses specialists when appropriate. Pick an advisor to focus that role for your next message. <strong>Any</strong> advisor can show bar, line, or pie charts — ask in plain English (e.g. “bar chart of…”, “data visualization of…”) — no special codes needed.</p>
+                </div>
+                <label for="chat-input" class="visually-hidden">Your message</label>
+                <textarea id="chat-input" rows="3" placeholder="Ask about policy, or say e.g. “line graph of spending over three years”…" required></textarea>
+                <button type="submit" class="cta-button chat-submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <h2>Get Involved</h2>
+            <p>Join us in building a better tomorrow. Your voice matters.</p>
+            <a href="mailto:contact@example.gov" class="cta-button">Contact Us</a>
+            <p class="copyright">© 2026 Presidential Office. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+    <script src="chat.js" defer></script>
+</body>
+</html>

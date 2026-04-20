@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Chat: leave empty when you open the site from uvicorn on :8000. If you use Live Server or another port, set to http://127.0.0.1:8000 -->
+    <meta name="chat-api-base" content="">
+    <!-- Set to "true" to log API URL and responses in the browser console -->
+    <meta name="adk-debug" content="false">
+    <title>President — Leadership for Tomorrow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav">
+            <a href="#" class="logo">The Office</a>
+            <ul class="nav-links">
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#priorities">Priorities</a></li>
+                <li><a href="#assistant">Assistant</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Leadership for a New Era</h1>
+            <p class="hero-tagline">Unity. Progress. Integrity.</p>
+            <a href="#priorities" class="cta-button">Learn more</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <section id="vision" class="section vision">
+        <div class="container">
+            <h2>Our Vision</h2>
+            <p class="lead">A nation where every citizen has the opportunity to thrive, where our values of freedom and justice guide every decision, and where we build a future worthy of the next generation.</p>
+        </div>
+    </section>
+
+    <section id="priorities" class="section priorities">
+        <div class="container">
+            <h2>Key Priorities</h2>
+            <p class="priorities-intro">Ten focus areas that shape our agenda.</p>
+            <div class="priority-grid">
+                <article class="priority-card">
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Economic Stability</h3>
+                    <p>GDP, jobs, growth, and financial stability for working families and businesses.</p>
+                </article>
+                <article class="priority-card">
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>National Security</h3>
+                    <p>Protecting our citizens and strengthening our alliances around the world.</p>
+                </article>
+                <article class="priority-card">
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Healthcare &amp; Education</h3>
+                    <p>Ensuring access to quality healthcare and world-class education for every family.</p>
+                </article>
+                <article class="priority-card">
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Climate &amp; Environment</h3>
+                    <p>Protecting our planet for future generations through sustainable policies and clean energy.</p>
+                </article>
+                <article class="priority-card">
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Infrastructure</h3>
+                    <p>Modernizing roads, bridges, and broadband to connect our communities and grow our economy.</p>
+                </article>
+                <article class="priority-card">
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Immigration Reform</h3>
+                    <p>Building a fair, secure, and humane immigration system that reflects our values.</p>
+                </article>
+                <article class="priority-card">
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Criminal Justice Reform</h3>
+                    <p>Ensuring fair treatment, rehabilitation, and second chances for all Americans.</p>
+                </article>
+                <article class="priority-card">
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Veterans &amp; Military Families</h3>
+                    <p>Honoring our veterans with proper healthcare, housing, and employment support.</p>
+                </article>
+                <article class="priority-card">
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Cost of Living &amp; Housing</h3>
+                    <p>Addressing inflation, housing costs, and affordability in communities nationwide.</p>
+                </article>
+                <article class="priority-card">
+                    <div class="priority-icon" aria-hidden="true">◆</div>
+                    <h3>Technology &amp; Innovation</h3>
+                    <p>Leading the world in AI, cybersecurity, and digital infrastructure for the 21st century.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section quote-section">
+        <blockquote class="quote">
+            “The best way to predict the future is to create it.”
+        </blockquote>
+    </section>
+
+    <section id="assistant" class="section assistant">
+        <div class="container assistant-inner">
+            <h2>Ask the Office</h2>
+            <p class="assistant-intro">This chat uses your ADK root agent only—no sub-agents.</p>
+            <p id="chat-api-banner" class="chat-api-banner" hidden role="status"></p>
+            <div id="chat-log" class="chat-log" aria-live="polite"></div>
+            <p id="chat-status" class="chat-status" role="status"></p>
+            <form id="chat-form" class="chat-form">
+                <label for="chat-input" class="visually-hidden">Your message</label>
+                <textarea id="chat-input" rows="3" placeholder="Ask about priorities, policy, or leadership…" required></textarea>
+                <button type="submit" class="cta-button chat-submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <h2>Get Involved</h2>
+            <p>Join us in building a better tomorrow. Your voice matters.</p>
+            <a href="mailto:contact@example.gov" class="cta-button">Contact Us</a>
+            <p class="copyright">© 2026 Presidential Office. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="chat.js" defer></script>
+</body>
+</html>
