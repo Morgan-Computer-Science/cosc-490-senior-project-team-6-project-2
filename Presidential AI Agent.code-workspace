@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Presidential AI Agent",
+			"path": "."
+		},
+		{
+			"name": "my_agent",
+			"path": "../../my_agent"
+		}
+	],
+	"settings": {}
+}
